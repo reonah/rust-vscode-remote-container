@@ -1,0 +1,23 @@
+version: '3'
+
+dotenv: ['./.devcontainer/.env']
+
+tasks:
+  
+  new:
+    cmd:
+      - cargo new ${APP_NAME} 
+  build:
+    cmds:
+      - cargo build 
+
+  run:
+    desc: run 
+    cmds:
+      - cargo run
+  
+  run-binary:
+    desc: run binary
+    cmds:
+      - task build
+      - ./target/debug/${APP_NAME}

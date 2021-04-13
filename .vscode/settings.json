@@ -1,0 +1,142 @@
+{
+	
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "/bin/bash",
+		}
+	},
+	"terminal.integrated.defaultProfile.linux": "bash",
+
+	"editor.tabSize": 2,
+	"editor.guides.bracketPairs": true,
+	"editor.bracketPairColorization.enabled": true,
+  
+	// show unused variables with colored(#ee5b5b) underline 
+	"workbench.colorCustomizations": {
+    "editorUnnecessaryCode.border": "#ee5b5b"  
+  },
+
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": true
+		},
+	},
+	"yaml.schemas": {
+		"https://s3.amazonaws.com/cfn-resource-specifications-us-east-1-prod/schemas/2.15.0/all-spec.json": "*-template.yaml"
+	},
+	"cfnLint.path": "/usr/local/bin/cfn-lint",
+	"yaml.customTags": [
+	  "!Ref",
+	  "!Sub scalar",
+	  "!Sub sequence",
+	  "!Join sequence",
+	  "!FindInMap sequence",
+	  "!GetAtt scalar",
+	  "!GetAtt sequence",
+	  "!Base64 mapping",
+	  "!GetAZs",
+	  "!Select scalar",
+	  "!Select sequence",
+	  "!Split sequence",
+	  "!ImportValue",
+	  "!Condition",
+	  "!Equals sequence",
+	  "!And",
+	  "!If",
+	  "!If sequence",
+	  "!If scalar",
+	  "!Not",
+	  "!Not sequence",
+	  "!Not scalar",
+	  "!Or",
+	  "!fn",
+	  "!Equals",
+	  "!Base64",
+	  "!Cidr",
+	  "!Sub",
+	  "!GetAtt",
+	  "!Select",
+	  "!Split",
+	  "!And sequence",
+	  "!Or sequence",
+	  "!FindInMap",
+	  "!Join",
+	  "!ImportValue sequence"
+	],
+  
+	// アノテーションコメントの設定
+	"todohighlight": {
+	  "isCaseSensitive": false, // 大文字小文字区別しない。
+	  "defaultStyle": {
+		"color": "black",
+		"backgroundColor": "pink",
+		"isWholeLine": false,
+	  },
+	  "keywords": [
+		"DEBUG:",
+		"REVIEW:",
+		"HACK:",
+		"XXX:",
+		"WARNING:",
+		"NOTE:",
+	  ],
+	},
+	"todo-tree.general.tags": [
+	  "DEBUG:",
+	  "REVIEW:",
+	  "HACK:",
+	  "XXX:",
+	  "WARNING:",
+	  "NOTE:",
+	],
+	"files.watcherExclude": {
+		"**/target": true
+	},
+	"cSpell.ignoreWords": [
+		"Expt",
+		"Hadolint",
+		"LOCALSTACK",
+		"alefragnani",
+		"amazonlinux",
+		"amazonwebservices",
+		"azuretools",
+		"boto",
+		"botocore",
+		"bungcip",
+		"cform",
+		"cmds",
+		"codezombiech",
+		"dataclass",
+		"devcontainer",
+		"dotenv",
+		"drawio",
+		"dynamodbadmin",
+		"dynamodblocal",
+		"eamodio",
+		"errorfactory",
+		"errorlens",
+		"esbenp",
+		"exiasr",
+		"gruntfuggly",
+		"hadolint",
+		"hediet",
+		"instructure",
+		"ionutvmi",
+		"isort",
+		"kddejong",
+		"mikestead",
+		"oderwat",
+		"reonah",
+		"usernamehw",
+		"vadimcn",
+		"vscodeintellicode",
+		"vscodevim",
+		"wayou",
+		"yzhang"
+	],
+}
+  

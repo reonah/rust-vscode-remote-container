@@ -1,0 +1,25 @@
+# ビルドトリガの定義
+on:
+  push:
+    branches:
+      - "feature/**"
+
+name: Create "Pull Request"
+
+jobs:
+
+  pull-request:
+    
+    runs-on: ubuntu-latest
+
+    env:
+      GH_TOKEN: ${{ secrets.TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # https://cli.github.com/manual/gh_pr_create
+      - name: Create Pull Request
+        id: create_pr
+        run: |
+          gh pr create --base main --head "${{ github.ref_name }}" --title "${{ github.event.head_commit.message }}" --body "`cat .github/PULL_REQUEST_TEMPLATE.md`" --draft --reviewer "reonah"

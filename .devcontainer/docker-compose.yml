@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  app:
+    build: ./
+    working_dir: /app
+    volumes:
+      - ../:/app
+      - ../.devcontainer/.bashrc:/root/.bashrc
+      - ~/.ssh:/root/.ssh #sync my own local-setting
+      - ../.devcontainer/dummy_credentials:/root/.aws/credentials
+      - ~/.gitconfig:/root/.gitconfig #sync my own local-setting
+      - ~/.gitignore_global:/root/.gitignore_global
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file: .env # https://code.visualstudio.com/docs/remote/containers-advanced
+    tty: true

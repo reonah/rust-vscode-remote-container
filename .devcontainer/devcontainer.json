@@ -1,0 +1,108 @@
+{
+	"name": "rust-template",
+
+	"dockerComposeFile": [
+		"docker-compose.yml",
+		"localstack.yml"
+	],
+
+	"settings": {
+		
+	},
+
+	"service": "app",
+	"workspaceFolder": "/app",
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+
+		// # language specific extensions	
+
+		// https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer
+		"rust-lang.rust-analyzer",
+		
+		// https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb
+		"vadimcn.vscode-lldb", // https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb
+
+		// # General
+		
+		// https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+		"oderwat.indent-rainbow", 
+
+		// https://marketplace.visualstudio.com/items?itemName=hnw.vscode-auto-open-markdown-preview
+		"hnw.vscode-auto-open-markdown-preview", 
+
+		// https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+		"eamodio.gitlens",
+
+		// https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore
+		"codezombiech.gitignore",
+
+		// https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+		"redhat.vscode-yaml",
+
+		// https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete
+		"ionutvmi.path-autocomplete",
+
+		// https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+		"esbenp.prettier-vscode",
+
+		// https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks
+		"alefragnani.Bookmarks",
+		
+		// https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+		"streetsidesoftware.code-spell-checker",
+
+		// https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
+		"usernamehw.errorlens",
+
+		// https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+		"yzhang.markdown-all-in-one",
+
+		//https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced
+		"shd101wyy.markdown-preview-enhanced",
+
+		// https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer
+		"IBM.output-colorizer", 
+		
+		// https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
+		"gruntfuggly.todo-tree",
+
+		// https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight
+		"wayou.vscode-todo-highlight",
+
+		// https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv
+		"mikestead.dotenv",
+
+		// https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio
+		"hediet.vscode-drawio",
+
+		// docker
+		"ms-azuretools.vscode-docker",
+
+		// # AWS
+		
+		// https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform
+		"aws-scripting-guy.cform", 
+		
+		// https://marketplace.visualstudio.com/items?itemName=kddejong.vscode-cfn-lint
+		"kddejong.vscode-cfn-lint",
+
+		// aws tool kit
+		"amazonwebservices.aws-toolkit-vscode",
+		
+		// https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
+		"VisualStudioExptTeam.vscodeintellicode",
+
+		// Better Toml https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml
+		"bungcip.better-toml",
+		
+		// Hadolint https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint
+		"exiasr.hadolint",
+
+		// 環境依存
+
+		// Vim https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+		"vscodevim.vim"
+	]
+}
