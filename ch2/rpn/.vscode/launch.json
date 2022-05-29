@@ -1,0 +1,24 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Launch",
+			"program": "${workspaceFolder}/<your program>",
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "custom",
+			"name": "Custom launch",
+			"targetCreateCommands": [
+				"target create ${workspaceFolder}/<your program>"
+			],
+			"processCreateCommands": [
+				"settings set target.run-args value1 value2 value3",
+				"process launch"
+			]
+		},
+	]
+}
