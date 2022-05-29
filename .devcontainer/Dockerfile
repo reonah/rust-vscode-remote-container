@@ -13,7 +13,7 @@ WORKDIR /build
 # some tools
 RUN <<Tools
     apt-get update -y
-    apt-get install -y --no-install-recommends git vim curl unzip jq python${PYTHON_VER} python3-pip
+    apt-get install -y --no-install-recommends git vim curl unzip jq lldb python${PYTHON_VER} python3-pip
     pip3 --no-cache-dir install cfn-lint
     apt-get clean
     rm -rf /var/lib/apt/list/*
