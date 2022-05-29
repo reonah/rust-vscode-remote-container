@@ -1,0 +1,30 @@
+version: '3'
+
+dotenv: ['./.devcontainer/.env']
+
+
+vars:
+  APP: rpn
+
+tasks:
+  
+  new:
+    desc: start new app
+    cmds:
+      - cargo new {{.APP}}
+  
+  build:
+    desc: build
+    cmds:
+      - cargo build 
+
+  run:
+    desc: run 
+    cmds:
+      - cargo run
+  
+  run-binary:
+    desc: run binary
+    cmds:
+      - task build
+      - ./target/debug/{{.APP}}
