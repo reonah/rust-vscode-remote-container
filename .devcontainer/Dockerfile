@@ -13,7 +13,9 @@ WORKDIR /build
 # some tools
 RUN <<Tools
     apt-get update -y
-    apt-get install -y --no-install-recommends git vim curl unzip jq lldb python${PYTHON_VER} python3-pip
+    apt-get install -y --no-install-recommends git vim curl unzip jq lldb python${PYTHON_VER} python3-pip libssl-dev pkg-config
+    ln -sf /usr/bin/python3.9 /usr/bin/python3
+    ln -sf /usr/bin/pip3.9 /usr/bin/pip3
     pip3 --no-cache-dir install cfn-lint
     apt-get clean
     rm -rf /var/lib/apt/list/*
@@ -34,6 +36,11 @@ RUN <<Awscli
     chmod +x ./aws/install
     ./aws/install
 Awscli
+
+RUN <<rust
+    rustup component add rustfmt clippy rust-analysis rust-src
+    cargo install cargo-edit
+rust
 
 # go
 RUN <<Go
@@ -71,6 +78,8 @@ hadolint
 FROM public.ecr.aws/docker/library/rust:1.61.0-slim
 LABEL maintainer "reona.hoshino <dev.reona.hoshino+github@gmail.com>" 
 
+COPY --from=build /usr/local/cargo/ /usr/local/cargo/
+COPY --from=build /usr/local/rustup/ /usr/local/rustup/
 COPY --from=build /usr/local/bin/ /usr/local/bin/
 COPY --from=build /usr/local/aws-sam-cli/ /usr/local/aws-sam-cli/
 COPY --from=build /usr/local/aws-cli/ /usr/local/aws-cli/
@@ -88,7 +97,6 @@ COPY --from=build /usr/local/lib/python3.9/ /usr/local/lib/python3.9/
 COPY --from=build /root/git-prompt.sh /root/git-prompt.sh
 COPY --from=build /root/git-completion.bash /root/git-completion.bash
 COPY --from=build /root/rain_completion.sh /root/rain_completion.sh
-
 ENV SHELL=/bin/bash
 ENV GOPATH=/usr/go
 ENV PATH=$PATH:$GOPATH/bin
