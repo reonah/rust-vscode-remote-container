@@ -1,5 +1,4 @@
 {
-	
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "/bin/bash",
@@ -16,6 +15,25 @@
     "editorUnnecessaryCode.border": "#ee5b5b"  
   },
 
+	"[rust]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true 
+		},
+		"editor.defaultFormatter": "rust-lang.rust-analyzer", 
+		"editor.insertSpaces": true,
+		"editor.detectIndentation": true,
+		"cSpell.showAutocompleteSuggestions": true,
+		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+		"editor.tabSize": 4
+	},
+	"rust-analyzer.inlayHints.chainingHints.enable": false,
+	"rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
+	"rust-analyzer.inlayHints.parameterHints.enable": false,
+	"rust-analyzer.inlayHints.typeHints.enable": false,
+	"rust-analyzer.rustfmt.rangeFormatting.enable": true,
+
 	"[yaml]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
@@ -28,7 +46,7 @@
 	"yaml.schemas": {
 		"https://s3.amazonaws.com/cfn-resource-specifications-us-east-1-prod/schemas/2.15.0/all-spec.json": "*-template.yaml"
 	},
-	"cfnLint.path": "/usr/local/bin/cfn-lint",
+
 	"yaml.customTags": [
 	  "!Ref",
 	  "!Sub scalar",
@@ -68,6 +86,8 @@
 	  "!ImportValue sequence"
 	],
   
+	"cfnLint.path": "/usr/local/bin/cfn-lint",
+	
 	// アノテーションコメントの設定
 	"todohighlight": {
 	  "isCaseSensitive": false, // 大文字小文字区別しない。
@@ -93,9 +113,6 @@
 	  "WARNING:",
 	  "NOTE:",
 	],
-	"files.watcherExclude": {
-		"**/target": true
-	},
 	"cSpell.ignoreWords": [
 		"Expt",
 		"Hadolint",
@@ -138,5 +155,10 @@
 		"wayou",
 		"yzhang"
 	],
+	"[json]": {
+		"editor.tabSize": 2,
+		"editor.insertSpaces": false,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 }
   

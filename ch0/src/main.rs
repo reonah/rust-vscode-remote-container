@@ -1,3 +1,5 @@
+//! This is sample doc
+
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, Teams!");
 }

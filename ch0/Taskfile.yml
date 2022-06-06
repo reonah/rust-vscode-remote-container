@@ -1,15 +1,26 @@
 version: '3'
 
-dotenv: ['./.devcontainer/.env']
+vars:
+  APP: setup
 
 tasks:
   
   new:
     cmd:
       - cargo new ${APP_NAME} 
+
+  clean:
+    cmd:
+      - cargo clean
+
   build:
     cmds:
       - cargo build 
+
+  doc:
+    desc: generate rust doc
+    cmds:
+      - cargo doc
 
   run:
     desc: run 
@@ -19,5 +30,6 @@ tasks:
   run-binary:
     desc: run binary
     cmds:
+      - task clean
       - task build
       - ./target/debug/${APP_NAME}
