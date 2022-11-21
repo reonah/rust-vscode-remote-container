@@ -2,17 +2,15 @@
 	"name": "rust-template",
 
 	"dockerComposeFile": [
-		"docker-compose.yml",
-		"localstack.yml"
+		"docker-compose.yml"
 	],
 
 	"settings": {
-		
 	},
-
+	
 	"service": "app",
 	"workspaceFolder": "/app",
-
+	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 
@@ -94,15 +92,18 @@
 		// https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
 		"VisualStudioExptTeam.vscodeintellicode",
 
-		// Better Toml https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml
+		// https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml
 		"bungcip.better-toml",
 		
-		// Hadolint https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint
+		// https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint
 		"exiasr.hadolint",
 
 		// 環境依存
 
-		// Vim https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+		// https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
 		"vscodevim.vim"
+
+		// https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode
+		// "TabNine.tabnine-vscode"
 	]
 }
