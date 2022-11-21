@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "feature/**"
+      - "topic/**"
 
 name: Create "Pull Request"
 
