@@ -78,17 +78,12 @@
 		// docker
 		"ms-azuretools.vscode-docker",
 
-		// # AWS
-		
 		// https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cform
 		"aws-scripting-guy.cform", 
 		
 		// https://marketplace.visualstudio.com/items?itemName=kddejong.vscode-cfn-lint
 		"kddejong.vscode-cfn-lint",
 
-		// aws tool kit
-		"amazonwebservices.aws-toolkit-vscode",
-		
 		// https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode
 		"VisualStudioExptTeam.vscodeintellicode",
 

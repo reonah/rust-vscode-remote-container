@@ -1,7 +1,6 @@
 # syntax=docker/dockerfile:1.4
-
 # https://gallery.ecr.aws/docker/library/rust
-FROM public.ecr.aws/docker/library/rust:1.61.0-slim as build
+FROM rust:1.65.0-slim-bullseye as build
 
 LABEL maintainer "reona.hoshino <dev.reona.hoshino+github@gmail.com>" 
 
@@ -29,7 +28,7 @@ RUN curl -L https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadol
     chmod +x /usr/bin/hadolint
 
 
-FROM public.ecr.aws/docker/library/rust:1.61.0-slim
+FROM rust:1.65.0-slim-bullseye
 LABEL maintainer "reona.hoshino <dev.reona.hoshino+github@gmail.com>" 
 
 COPY --from=build /usr/local/cargo/ /usr/local/cargo/
